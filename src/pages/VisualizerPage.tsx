@@ -13,6 +13,7 @@ import { StringVisualizer } from '../visualizers/StringVisualizer';
 // Components
 import { ControlPanel } from '../components/ControlPanel';
 import { SolutionsModal } from '../components/SolutionsModal';
+import { AITutorPanel } from '../components/AITutorPanel';
 import { Activity, ArrowLeft, Clock, HardDrive, Lightbulb, AlertTriangle, Globe, ChevronRight, Eye } from 'lucide-react';
 
 // Algorithms that can produce multiple solutions
@@ -314,6 +315,9 @@ export const VisualizerPage = () => {
                 onClose={() => setShowSolutions(false)}
                 n={currentState?.board?.length || 8}
             />
+
+            {/* AI Tutor Panel Floatiing Widget */}
+            <AITutorPanel />
         </div>
     );
 };
