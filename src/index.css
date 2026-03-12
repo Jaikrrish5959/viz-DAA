@@ -4,13 +4,26 @@
   --font-inter: "Inter", sans-serif;
   --font-outfit: "Outfit", sans-serif;
 
-  --color-app-bg: #0A0A0B;
-  --color-app-surface: #141416;
-  --color-app-border: #27272A;
-  
+  --color-app-bg: var(--app-bg);
+  --color-app-surface: var(--app-surface);
+  --color-app-border: var(--app-border);
+  --color-app-text: var(--app-text);
+  --color-app-text-muted: var(--app-text-muted);
+
+  /* Category accent colors */
+  --color-primary-400: #A78BFA;
   --color-primary-500: #8B5CF6;
   --color-primary-600: #7C3AED;
   --color-primary-glow: rgba(139, 92, 246, 0.4);
+
+  --color-cat-backtracking: #A78BFA;
+  --color-cat-dp: #60A5FA;
+  --color-cat-sorting: #FBBF24;
+  --color-cat-graph: #22D3EE;
+  --color-cat-greedy: #34D399;
+  --color-cat-string: #F472B6;
+  --color-cat-bnb: #FB923C;
+  --color-cat-ds: #2DD4BF;
 
   --color-success: #10B981;
   --color-danger: #EF4444;
@@ -18,12 +31,32 @@
 }
 
 @layer base {
-  body {
-    @apply bg-app-bg text-gray-100 font-inter antialiased min-h-screen;
-    background-image: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  :root {
+    --app-bg: #F8FAFC;
+    --app-surface: #FFFFFF;
+    --app-border: #E2E8F0;
+    --app-text: #0F172A;
+    --app-text-muted: #64748B;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-outfit text-white tracking-tight;
+  :root.dark {
+    --app-bg: #0A0A0B;
+    --app-surface: #141416;
+    --app-border: #27272A;
+    --app-text: #F8FAFC;
+    --app-text-muted: #94A3B8;
+  }
+
+  body {
+    @apply bg-app-bg text-app-text font-inter antialiased min-h-screen transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-outfit text-app-text tracking-tight;
   }
 }

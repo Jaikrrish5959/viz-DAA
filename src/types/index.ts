@@ -1,4 +1,4 @@
-export type ActionType = 'try' | 'place' | 'backtrack' | 'solution' | 'conflict' | 'swap' | 'compare' | 'found' | 'none';
+export type ActionType = 'try' | 'place' | 'backtrack' | 'solution' | 'conflict' | 'swap' | 'compare' | 'found' | 'none' | 'explore' | 'update' | 'skip' | 'pivot' | 'overwrite' | 'sorted';
 
 export interface GridCell {
     row: number;
@@ -25,7 +25,7 @@ export interface AlgorithmComplexity {
     space: string;
 }
 
-export type InputType = 'number' | 'text' | 'array' | 'select' | 'boolean';
+export type InputType = 'number' | 'text' | 'array' | 'select' | 'boolean' | 'json';
 
 export interface AlgorithmInputDef {
     name: string;
@@ -41,7 +41,7 @@ export interface AlgorithmInputDef {
 export interface AlgorithmModule {
     name: string;
     id: string; // url-friendly id
-    category: 'Backtracking' | 'Dynamic Programming' | 'Divide and Conquer' | 'Greedy' | 'String Matching' | 'Sorting' | 'Graph Algorithms' | 'Other';
+    category: 'Backtracking' | 'Dynamic Programming' | 'Divide and Conquer' | 'Greedy' | 'String Matching' | 'Sorting' | 'Graph Algorithms' | 'Branch and Bound' | 'Data Structures' | 'Other';
     description: string;
     pseudocode: string[];
     complexity: AlgorithmComplexity;

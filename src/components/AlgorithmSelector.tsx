@@ -52,13 +52,13 @@ export const AlgorithmSelector: React.FC<AlgorithmSelectorProps> = ({ algorithms
 
             {algorithm && (
                 <div className="flex-1 flex gap-4 text-sm mt-4 sm:mt-0">
-                    <div className="bg-gray-800/50 rounded-lg p-3 flex-1 border border-gray-700/50">
+                    <div className="bg-gray-800/50 rounded-lg p-3 flex-1 border border-gray-700/50 overflow-hidden">
                         <span className="text-gray-500 text-xs block uppercase tracking-wider mb-1">Time</span>
-                        <span className="text-primary-400 font-mono font-medium">{algorithm.complexity.time}</span>
+                        <span className="text-primary-400 font-mono font-medium text-xs">{algorithm.complexity.time}</span>
                     </div>
-                    <div className="bg-gray-800/50 rounded-lg p-3 flex-1 border border-gray-700/50">
+                    <div className="bg-gray-800/50 rounded-lg p-3 flex-1 border border-gray-700/50 overflow-hidden">
                         <span className="text-gray-500 text-xs block uppercase tracking-wider mb-1">Space</span>
-                        <span className="text-primary-400 font-mono font-medium">{algorithm.complexity.space}</span>
+                        <span className="text-primary-400 font-mono font-medium text-xs">{algorithm.complexity.space}</span>
                     </div>
                 </div>
             )}

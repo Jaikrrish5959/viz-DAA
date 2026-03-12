@@ -48,7 +48,7 @@ export const ControlPanel: React.FC = () => {
                 <button
                     onClick={reset}
                     title="Reset"
-                    className="p-2 sm:p-3 rounded-xl hover:bg-gray-800 text-gray-400 hover:text-white transition-colors disabled:opacity-50"
+                    className="p-2 sm:p-3 rounded-xl hover:bg-app-bg text-app-text-muted hover:text-app-text transition-colors disabled:opacity-50"
                     disabled={!algorithm || currentStepIndex <= 0}
                 >
                     <RotateCcw size={20} />
@@ -57,7 +57,7 @@ export const ControlPanel: React.FC = () => {
                 <button
                     onClick={prevStep}
                     title="Previous Step"
-                    className="p-2 sm:p-3 rounded-xl hover:bg-gray-800 text-gray-400 hover:text-white transition-colors disabled:opacity-50"
+                    className="p-2 sm:p-3 rounded-xl hover:bg-app-bg text-app-text-muted hover:text-app-text transition-colors disabled:opacity-50"
                     disabled={!algorithm || currentStepIndex <= 0 || isPlaying}
                 >
                     <SkipBack size={20} />
@@ -75,7 +75,7 @@ export const ControlPanel: React.FC = () => {
                 <button
                     onClick={nextStep}
                     title="Next Step"
-                    className="p-2 sm:p-3 rounded-xl hover:bg-gray-800 text-gray-400 hover:text-white transition-colors disabled:opacity-50"
+                    className="p-2 sm:p-3 rounded-xl hover:bg-app-bg text-app-text-muted hover:text-app-text transition-colors disabled:opacity-50"
                     disabled={!algorithm || isAtEnd || isPlaying}
                 >
                     <SkipForward size={20} />
@@ -84,7 +84,7 @@ export const ControlPanel: React.FC = () => {
                 <button
                     onClick={skipToNextSolution}
                     title="Skip to Next Solution"
-                    className="p-2 sm:p-3 rounded-xl hover:bg-gray-800 text-gray-400 hover:text-white transition-colors disabled:opacity-50"
+                    className="p-2 sm:p-3 rounded-xl hover:bg-app-bg text-app-text-muted hover:text-app-text transition-colors disabled:opacity-50"
                     disabled={!algorithm || isAtEnd}
                 >
                     <FastForward size={20} />
@@ -93,7 +93,7 @@ export const ControlPanel: React.FC = () => {
                 <button
                     onClick={skipToEnd}
                     title="Skip to Generation End"
-                    className="p-2 sm:p-3 rounded-xl hover:bg-gray-800 text-gray-400 hover:text-white transition-colors disabled:opacity-50"
+                    className="p-2 sm:p-3 rounded-xl hover:bg-app-bg text-app-text-muted hover:text-app-text transition-colors disabled:opacity-50"
                     disabled={!algorithm || isAtEnd}
                 >
                     <ChevronsRight size={20} />
@@ -110,9 +110,9 @@ export const ControlPanel: React.FC = () => {
             )}
 
             {/* Speed Control */}
-            <div className="flex items-center gap-3 w-full sm:w-auto px-4 py-2 bg-gray-900 rounded-xl border border-gray-800">
-                <Settings2 size={18} className="text-gray-500" />
-                <span className="text-sm font-medium text-gray-400 w-16">
+            <div className="flex items-center gap-3 w-full sm:w-auto px-4 py-2 bg-app-surface rounded-xl border border-app-border">
+                <Settings2 size={18} className="text-app-text-muted" />
+                <span className="text-sm font-medium text-app-text-muted w-16">
                     {speedMs}ms
                 </span>
                 <input
@@ -124,7 +124,7 @@ export const ControlPanel: React.FC = () => {
                     onChange={(e) => setSpeed(Number(e.target.value))}
                     className="w-full sm:w-32 accent-primary-500"
                 />
-                <span className="text-xs text-gray-500 font-medium">Slow</span>
+                <span className="text-xs text-app-text-muted font-medium">Slow</span>
             </div>
 
         </div>

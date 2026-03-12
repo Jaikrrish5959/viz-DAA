@@ -37,6 +37,7 @@ export const AlgorithmConfigPanel: React.FC<AlgorithmConfigPanelProps> = ({
                     />
                 );
             case 'text':
+            case 'json':
             case 'array': // Simplifying array input UX to text field comma-separated for now
                 return (
                     <input
