@@ -6,6 +6,7 @@ import { VisualizerPage } from './pages/VisualizerPage';
 import { LearnPage } from './pages/LearnPage';
 import { ComparePage } from './pages/ComparePage';
 import { AboutPage } from './pages/AboutPage';
+import { SourceCodePage } from './pages/SourceCodePage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/algorithms" element={<LibraryPage />} />
           <Route path="/visualizer/:id" element={<VisualizerPage />} />
           <Route path="/learn" element={<LearnPage />} />
+          <Route path="/source-code" element={<SourceCodePage />} />
           <Route path="/compare" element={<ComparePage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>

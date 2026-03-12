@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Activity, BookOpen, GitCompare, Info, LayoutGrid, Sun, Moon } from 'lucide-react';
+import { Activity, BookOpen, GitCompare, Info, LayoutGrid, Sun, Moon, Code2 } from 'lucide-react';
 import { allAlgorithms } from '../data/algorithmData';
 import { useTheme } from '../hooks/useTheme';
 
@@ -10,6 +10,7 @@ export const Navbar = () => {
         { to: '/', label: 'Home', icon: Activity },
         { to: '/algorithms', label: 'Algorithms', icon: LayoutGrid },
         { to: '/learn', label: 'Learn', icon: BookOpen },
+        { to: '/source-code', label: 'Code', icon: Code2 },
         { to: '/compare', label: 'Compare', icon: GitCompare },
         { to: '/about', label: 'About', icon: Info },
     ];
