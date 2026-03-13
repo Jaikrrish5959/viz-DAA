@@ -12,8 +12,7 @@ export interface TutorContext {
 export async function askTutor(question: string, context: TutorContext, apiKey: string): Promise<string> {
     try {
         const genAI = new GoogleGenerativeAI(apiKey);
-        // Specifically instructed to use Gemini 1.5 Pro or Flash as they are best for this
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+        const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
         const prompt = `
 You are an expert Computer Science professor and algorithm tutor helping a student understand a complex algorithm visualization.
